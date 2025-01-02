@@ -1,1 +1,1 @@
-My solutions for Grind 75, which is originally found [here](https://www.techinterviewhandbook.org/grind75/) but I used the leetcode list [here](https://leetcode.com/problem-list/rab78cw1/).
+My solutions for Grind 75, which is originally found [here](https://www.techinterviewhandbook.org/grind75/) but I'm using the leetcode list [here](https://leetcode.com/problem-list/rab78cw1/).
