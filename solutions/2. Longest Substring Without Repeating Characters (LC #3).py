@@ -1,9 +1,11 @@
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 
-        # sliding window + set, O(n)
+        """ sliding window + set, O(n) """
 
-        if len(s) == len(set(s)):
+        if self.isUnique(s):
             return len(s)
 
         left = 0
@@ -27,21 +29,16 @@ class Solution:
 
         return maxLen
 
-        # brute force solution, O(n^2)
+        """ brute force solution, O(n^2) """
 
         # maxLen = 0
 
-        # for i in range(1, len(s) + 1):       # i = length of substring
-        #     for j in range(len(s) - i + 1):  # j = starting index of substring
-
-        #         substring = s[j : j+i]
-                
-        #         isUnique = True
-        #         for char in substring:
-        #             if substring.count(char) != 1:
-        #                 isUnique = False
-                
-        #         if isUnique:
+        # for i in range(1, len(s) + 1): # length of substring
+        #     for j in range(len(s) - i + 1): # starting index of substring
+        #         if self.isUnique(s[j : j + i]):
         #             maxLen = i
         
         # return maxLen
+
+    def isUnique(self, s: str) -> str:
+        return len(s) == len(set(s))

@@ -1,14 +1,11 @@
+# https://leetcode.com/problems/two-sum
+
+from typing import List
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
-        # brute force, O(n^2)
-        
-        # for i in range(len(nums)):
-        #     for j in range(i + 1, len(nums)):
-        #         if nums[i] + nums[j] == target:
-        #             return [i, j]
-
-        # hash table, O(n)
+        """ hash table, O(n) """
 
         hashMap = {nums[0]: 0}
         for i in range(1, len(nums)):
@@ -16,3 +13,10 @@ class Solution:
             if diff in hashMap:
                 return [i, hashMap[diff]]
             hashMap[nums[i]] = i
+
+        """ brute force, O(n^2) """
+        
+        # for i in range(len(nums)):
+        #     for j in range(i + 1, len(nums)):
+        #         if nums[i] + nums[j] == target:
+        #             return [i, j]
