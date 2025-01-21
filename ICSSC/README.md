@@ -1,1 +1,1 @@
-My solutions to UCI ICSSC's leetcode study group assignments. Details TBD. Lol.
+My solutions to UCI ICSSC's leetcode study group assignments. Details TBD.
